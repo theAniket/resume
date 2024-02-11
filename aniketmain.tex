@@ -1,0 +1,229 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Aniket Aggarwal} \\ \vspace{5pt}
+    \small \faPhone* \texttt{9306015056} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{\href{mailto:aniketaggarwal43@gmail.com}{aniketaggarwal43@gmail.com}} \hspace{1pt} $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \texttt{\href{https://github.com/theAniket}{theAniket}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \texttt{\href{https://www.linkedin.com/in/theAniket}{theAniket}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {ScriptStack}{Oct. 2023 -- Dec. 2023}
+      {Full Stack Developer Intern  (\href{https://scriptstack.live/}{\myuline {scriptstack.live}})}{Chandigarh, IN}
+      \resumeItemListStart
+        \resumeItem{Worked on several projects in both frontend and backend. Created e-commerce websites for various businesses}
+        \resumeItem{\textbf{Led client collaborations}, translating requirements into technical specifications, and delivering tailored, user-friendly online platforms}
+         \resumeItem{Co-created a comprehensive e-commerce website for a growing online retailer, \textbf{enhancing their digital presence} and \textbf{optimizing sales processes}}
+        \resumeItem{Strengthened skills in \textbf{leadership}, \textbf{client communication}, and \textbf{project management} within the dynamic web development sector}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Coding Ninjas}{Mar. 2022 -- Sept. 2022}
+      {Campus Ambassador Internship}{Chitkara University}
+      \resumeItemListStart
+        \resumeItem{Worked in developing coding culture among the student communities}
+        \resumeItem{Utilized social media platforms and other communication channels to promote coding events, \textbf{increasing participation and awareness} within the student body.}
+        \resumeItem{\textbf{\href{https://media.licdn.com/dms/document/media/D4D2DAQFRajaD1Cr_rQ/profile-treasury-document-pdf-analyzed/0/1696187831962?e=1708560000&v=beta&t=cOZELndDmMFKGFCDOMBZtjAE02PdPvcxHl8ynnOAZTw}{Certification}}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/theAniket/FriendZone}{FriendZone}}} {Sept. 2023}
+          \resumeItemListStart
+            \resumeItem{Conceptualized, designed, and developed FriendZone, a social media application aimed at fostering genuine connections and meaningful friendships}
+            \resumeItem{Led the end-to-end development process, including ideation, UI/UX design, front-end and back-end development, and quality assurance, ensuring a seamless user experience}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{Vision Makers}}{Jan 2024}
+          \resumeItemListStart
+            \resumeItem{Pioneered and conceptualized an innovative project to develop assistive spectacles for the visually impaired, aimed at enhancing their daily lives and fostering greater independence}
+            \resumeItem{Presented the idea in Ideathon at CGC Jhanjheri, showcasing technical expertise and business acumen.}
+          \resumeItemListEnd
+        
+          
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chitkara University}{2021 -- Present}
+      {Bachelor of Computer Science and Engineering}{Rajpura, Punjab}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Coursework}: Data Structures, Algorithms, Databases, Computer Systems, Networking}
+     \resumeItem {Certified in \textbf{\href{https://coursera.org/share/a35381837ab6268661513953a464e5e8}{Engineering Project Management Specialization}} by Rice University}
+        \resumeItemListEnd
+
+        \resumeSubheading
+      {OSDAV Public School}{2012 -- 2021}
+      {Class XII}{Kaithal, Haryana}
+      	\resumeItemListStart
+    	\resumeItem {Represented OSDAV as a delegate at the prestigious Haryana State Bharat Scouts Camp, showcasing leadership, teamwork, and outdoor skills. \textbf{\href{https://drive.google.com/file/d/1uTiEoHuw2d7p5hrwtifur1jRmtq41n-y/view}{Certification}}}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Python, JavaScript (React.js), HTML/CSS, SQL (PostgreSQL, MySQL)}\vspace{2pt} \\
+     \textbf{Tools}     {: Figma, Notion, Jira, Trello, Miro, Google Analytics, GitHub, DaVinci Resolve, OBS}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
